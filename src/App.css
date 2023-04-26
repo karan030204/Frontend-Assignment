@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* CSS for mobile */
+@media screen and (max-width: 768px) {
+  div[style*="borderRadius"] {
+    borderRadius: 0;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  h4[style*="borderBottom"] {
+    borderBottom: none;
+  }
+
+  div[style*="display: flex"] {
+    flexDirection: column;
+  }
+
+  TextField[id="outlined-basic"] {
+    width: 100%;
+    minWidth: 0;
+    marginBottom: 1rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.json-editor {
+  flex-basis: 40%;
+  max-width: 40%;
+  margin: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.form {
+  flex-basis: 50%;
+  max-width: 50%;
+  border-radius: 4px;
+  margin: 1em;
+}
+
+/* CSS for screens up to 300px width */
+@media (max-width: 300px) {
+  .json-editor,
+  .form {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
+
+/* CSS for screens between 300px and 600px width */
+@media (min-width: 301px) and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .json-editor,
+  .form {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* CSS for screens between 601px and 768px width */
+@media (min-width: 601px) and (max-width: 768px) {
+  .json-editor {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .form {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* CSS for screens between 769px and 900px width */
+@media (min-width: 769px) and (max-width: 900px) {
+  .json-editor {
+    flex-basis: 40%;
+    max-width: 40%;
+  }
+
+  .form {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+
+/* CSS for screens between 901px and 1150px width */
+@media (min-width: 901px) and (max-width: 1150px) {
+  .json-editor {
+    flex-basis: 40%;
+    max-width: 40%;
+  }
+
+  .form {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+
+/* CSS for screens above 1150px width */
+@media (min-width: 1151px) {
+  .json-editor {
+    flex-basis: 40%;
+    max-width: 40%;
+  }
+
+  .form {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+
+
+
